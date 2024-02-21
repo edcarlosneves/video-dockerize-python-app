@@ -27,5 +27,5 @@ jobs:
       - name: Install pip dependencies
         run: pip instal pytest
 
-      - name: Execute tests:
+      - name: Execute tests
         run: pytest
