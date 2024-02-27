@@ -16,6 +16,9 @@ class Circle:
         return 2 * math.pi * self.radius
 
     def calculate_area_of_sector(self, central_angle):
-        if central_angle <= 360:
+        if 0 <= central_angle <= 360:
             return (central_angle / 360) * self.calculate_area()
-        raise ValueError("The central angle must be less than or equal to 360")
+        raise ValueError("The central angle must be between 0 and 360")
+
+    def __str__(self):
+        return f'Circle (radius={self.radius})'

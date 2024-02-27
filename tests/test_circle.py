@@ -31,4 +31,4 @@ def test_calculate_area_of_sector(circle):
 def test_calculate_area_of_sector_raise_error(circle):
     with raises(Exception) as exc_info:
         circle.calculate_area_of_sector(361)
-    assert str(exc_info.value) == "The central angle must be less than or equal to 360"
+    assert str(exc_info.value) == "The central angle must be between 0 and 360"
